@@ -10,7 +10,7 @@ public class HoleController : MonoBehaviour
 	{
 		if(isOpened)
 		{
-			screwController.Close(new Vector3(transform.localPosition.x, transform.localPosition.y, -5));	
+			screwController.Close(new Vector3(transform.localPosition.x, transform.localPosition.y, screwController.selectedScrew.GetComponent<Screw>().targetOpenZ));	
 		}
 	}
 }

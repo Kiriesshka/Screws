@@ -481,6 +481,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlankTriple (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6073138707253634944, guid: 75913b7614544cbc4ab891c5cd9be308,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7629298924809918447, guid: 75913b7614544cbc4ab891c5cd9be308,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -581,6 +586,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7080280158220407270, guid: b9ddc19f467c6b00093c6ee28ea2ba80,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7365015715895504327, guid: b9ddc19f467c6b00093c6ee28ea2ba80,
         type: 3}
@@ -703,7 +713,7 @@ PrefabInstance:
     - target: {fileID: 4586894605962478889, guid: b9ddc19f467c6b00093c6ee28ea2ba80,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 4586894605962478889, guid: b9ddc19f467c6b00093c6ee28ea2ba80,
         type: 3}
@@ -739,6 +749,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7080280158220407270, guid: b9ddc19f467c6b00093c6ee28ea2ba80,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7365015715895504327, guid: b9ddc19f467c6b00093c6ee28ea2ba80,
         type: 3}
@@ -826,7 +841,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 51.26
+  orthographic size: 60
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -915,7 +930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxChanges: {x: 40, y: 40}
   mouseStartPosition: {x: 0, y: 0, z: 0}
-  scale: 0.05
+  scale: 0.03
   holes: []
   distToRotate: 25
 --- !u!114 &330585549
@@ -951,6 +966,7 @@ MonoBehaviour:
   distance: 5
   minYAngle: -20
   maxYAngle: 70
+  currentRotation: {x: 0, y: 0, z: 0}
 --- !u!1 &360186345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,6 +1374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screwController: {fileID: 1594676640}
   targetPositions: []
+  timeToStartListenForceStop: 0.5
 --- !u!65 &451397007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1899,6 +1916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screwController: {fileID: 1594676640}
   targetPositions: []
+  timeToStartListenForceStop: 0.5
 --- !u!64 &633485110
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2447,7 +2465,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -91.6, z: 0}
-  m_LocalScale: {x: 123.4, y: 4, z: 80}
+  m_LocalScale: {x: 674.8, y: 4, z: 148.81}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2562,6 +2580,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlankTriple (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6073138707253634944, guid: 75913b7614544cbc4ab891c5cd9be308,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7629298924809918447, guid: 75913b7614544cbc4ab891c5cd9be308,
         type: 3}
@@ -3178,6 +3201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screwController: {fileID: 1594676640}
   targetPositions: []
+  timeToStartListenForceStop: 0.5
 --- !u!64 &1222417722
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3629,6 +3653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screwController: {fileID: 1594676640}
   targetPositions: []
+  timeToStartListenForceStop: 0.5
 --- !u!64 &1548394925
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3907,6 +3932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screwController: {fileID: 1594676640}
   targetPositions: []
+  timeToStartListenForceStop: 0.5
 --- !u!64 &1615795710
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4089,7 +4115,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -13.9}
-  m_LocalScale: {x: 150, y: 150, z: 1}
+  m_LocalScale: {x: 50, y: 50, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4596,6 +4622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screwController: {fileID: 1594676640}
   targetPositions: []
+  timeToStartListenForceStop: 0.5
 --- !u!64 &1927164539
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5245,7 +5272,7 @@ PrefabInstance:
     - target: {fileID: 4586894605962478889, guid: b9ddc19f467c6b00093c6ee28ea2ba80,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.11
       objectReference: {fileID: 0}
     - target: {fileID: 4586894605962478889, guid: b9ddc19f467c6b00093c6ee28ea2ba80,
         type: 3}
@@ -5280,6 +5307,11 @@ PrefabInstance:
     - target: {fileID: 4586894605962478889, guid: b9ddc19f467c6b00093c6ee28ea2ba80,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7080280158220407270, guid: b9ddc19f467c6b00093c6ee28ea2ba80,
+        type: 3}
+      propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7365015715895504327, guid: b9ddc19f467c6b00093c6ee28ea2ba80,
@@ -5389,6 +5421,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlankTriple
+      objectReference: {fileID: 0}
+    - target: {fileID: 6073138707253634944, guid: 75913b7614544cbc4ab891c5cd9be308,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7629298924809918447, guid: 75913b7614544cbc4ab891c5cd9be308,
         type: 3}

@@ -5,7 +5,9 @@ using UnityEngine;
 public class ScrewHat : MonoBehaviour
 {
 	public Screw screw;
-	
+	private void Start() {
+		screw = transform.parent.GetComponent<Screw>();
+	}
 	private void OnCollisionEnter(Collision other) {
 		if(other.transform.tag == "PLANK")
 		{

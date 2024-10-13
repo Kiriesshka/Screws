@@ -6,6 +6,9 @@ public class Screw : MonoBehaviour
 {
 	public ScrewController screwController;
 	public List<Vector3> targetPositions;
+	public float timeToStartListenForceStop = 0.5f;
+	public float timeToStartListenForceStopReference = 0.5f;
+	public float targetOpenZ = -5;
 	private void Start()
 	 {
 		targetPositions = new List<Vector3>() {transform.position};
@@ -21,12 +24,16 @@ public class Screw : MonoBehaviour
 		{
 			screwController.selectedScrew = this;
 			Open();
+			timeToStartListenForceStop = timeToStartListenForceStopReference;
 		}
 		
 	}
 	private void Update() 
 	{
-		
+		if(timeToStartListenForceStop > 0)
+		{
+			timeToStartListenForceStop -=Time.deltaTime;
+		}
 		if(targetPositions.Count >0)
 		{
 			transform.localPosition = Vector3.Lerp(transform.localPosition, targetPositions[0], Time.deltaTime*8);
@@ -44,12 +51,15 @@ public class Screw : MonoBehaviour
 	}
 	public void ForceStop()
 	{
-		targetPositions = new List<Vector3>() {transform.localPosition};
-		screwController.selectedScrew = null;
-		Debug.Log("Force stopped");
+		if(timeToStartListenForceStop <=0)
+		{
+			targetPositions = new List<Vector3>() {transform.localPosition};
+			screwController.selectedScrew = null;
+			Debug.Log("Force stopped");
+		}
 	}
 	public void Open()
 	{
-		targetPositions.Add(new Vector3(transform.localPosition.x, transform.localPosition.y, -5));
+		targetPositions.Add(new Vector3(transform.localPosition.x, transform.localPosition.y, targetOpenZ));
 	}
 }

@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
 	public float distToRotate = 40;
 	private void Start()
 	{
-		holes = new List<GameObject>(GameObject.FindGameObjectsWithTag("HOLE"));
+		holes = new List<GameObject>(GameObject.FindGameObjectsWithTag("SCREW"));
 	}
 	private void Update() 
 	{
