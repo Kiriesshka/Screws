@@ -806,10 +806,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11567f53398c131299b73ab408971342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleRight: 2
-  scaleLeft: 2
+  scaleRight: 5.53
+  scaleLeft: 0.01
   mod: 2.1
-  mod1: -2.1
+  mod1: -4
   right: {fileID: 8674521931470125929}
   left: {fileID: 2019126805557909142}
   middleLeft: {fileID: 2627863523741651104}

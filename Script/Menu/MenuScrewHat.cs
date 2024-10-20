@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScrewHat : MonoBehaviour
+public class MenuScrewHat : MonoBehaviour
 {
-	public Screw screw;
+    public MenuScrew screw;
 	private void Start() {
-		screw = transform.parent.GetComponent<Screw>();
+		screw = transform.parent.GetComponent<MenuScrew>();
 	}
 	private void OnCollisionEnter(Collision other) {
 		if(other.transform.tag == "PLANK" || other.transform.tag == "HOLE")

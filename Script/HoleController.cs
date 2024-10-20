@@ -6,7 +6,7 @@ public class HoleController : MonoBehaviour
 {
 	public bool isOpened;
 	public ScrewController screwController;
-	private void OnMouseDown() 
+	public void OnMouseDown() 
 	{
 		if(isOpened)
 		{

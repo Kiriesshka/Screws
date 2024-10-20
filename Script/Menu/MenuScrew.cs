@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Screw : MonoBehaviour
+public class MenuScrew : MonoBehaviour
 {
-	public ScrewController screwController;
+    public MenuScrewController screwController;
 	public List<Vector3> targetPositions;
 	public float timeToStartListenForceStop = 0.5f;
 	public float timeToStartListenForceStopReference = 0.5f;
-	public float targetOpenZ = -5;
+	public float targetOpenY = -5;
 	
 	private List<GameObject> holes;
 	private Transform nearestHole;
@@ -39,7 +39,7 @@ public class Screw : MonoBehaviour
 			}
 			if(nearestHole)
 			{
-				nearestHole.GetComponent<HoleController>().OnMouseDown();
+				nearestHole.GetComponent<MenuHoleController>().OnMouseDown();
 				nearestHole = null;
 			}
 		}
@@ -62,7 +62,7 @@ public class Screw : MonoBehaviour
 	public void Close(Vector3 targetPositionNew)
 	{
 		targetPositions.Add(targetPositionNew);
-		targetPositions.Add(new Vector3(targetPositionNew.x,targetPositionNew.y, -16));
+		targetPositions.Add(new Vector3(targetPositionNew.x,-1,targetPositionNew.z));
 		//screwController.selectedScrew = null;
 	}
 	public void ForceStop()
@@ -78,6 +78,6 @@ public class Screw : MonoBehaviour
 	}
 	public void Open()
 	{
-		targetPositions.Add(new Vector3(transform.localPosition.x, transform.localPosition.y, targetOpenZ));
+		targetPositions.Add(new Vector3(transform.localPosition.x, targetOpenY,transform.localPosition.z ));
 	}
 }

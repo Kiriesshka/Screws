@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 		currentPointsText.text = currentPoints.ToString();
 	}
 	private void Start() {
+		DynamicGI.UpdateEnvironment();
 		Application.targetFrameRate = 120;
 	}
 }
